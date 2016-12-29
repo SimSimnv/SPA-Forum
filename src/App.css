@@ -1,0 +1,653 @@
+.App {
+}
+
+#infoBox, #errorBox, #loadingBox {
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    display: none;
+    cursor: pointer;
+}
+
+#loadingBox {
+    background: #7CB3E9;
+}
+
+#infoBox {
+    background: #393;
+}
+
+#errorBox {
+    background: #F50;
+}
+
+#main {
+    margin: 0 10px 20px 10px;
+}
+
+table th {
+    padding: 10px;
+}
+
+table td {
+    padding: 5px 10px;
+}
+
+.chatroom-view {
+    display: inline-flex;
+}
+
+#userSidebar {
+    float: left;
+    background: #DDD;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: solid #7f7f7f 2px;
+}
+
+#message-box {
+    background: #DDD;
+    display: inline-block;
+    border-radius: 5px;
+    border: solid #7f7f7f 2px;
+    min-width: 500px;
+    padding: 15px;
+}
+
+.sidebar-user {
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+.sidebar-user:hover {
+    background: #7CB3E9;
+}
+
+.message-form {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.message-form label input{
+    width: 100%;
+}
+
+.message {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#chatMessages {
+    background: #7CB3E9;
+    border-radius: 5px;
+}
+
+#sideBar {
+    float: right;
+    width: 200px;
+    background-color: rgba(204, 204, 204, 0.75);
+    min-height: 100%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #525252;
+    border-radius: 12px;
+}
+
+#PostBox {
+    background: #9da0a4;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    color: #272B30;
+
+}
+
+#PostBox h2 {
+    color: whitesmoke;
+    font-family: Calibri;
+}
+
+#PostBox #PostText {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #525252;
+    border-width: 1px;
+    background: #DDDDDD;
+    margin-right: 20px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.my-btns {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.27);
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 5px;
+}
+
+.my-btns:hover {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 121, 204, .75);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0, 121, 204, .75);
+    box-shadow: 0px 0px 15px 5px rgba(0, 121, 204, .75);
+    background-color: transparent;
+    color: black;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: black;
+    font-size: 16px;
+    cursor: text;
+    border-radius: 3px;
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+.hvr-pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+    -webkit-animation-name: hvr-pulse;
+    animation-name: hvr-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+table {
+    margin: auto;
+    min-width: 450px;
+}
+
+p, h1 {
+    text-align: center;
+}
+
+table tr td,
+table tr th {
+    background-color: rgba(204, 204, 204, 0.75);
+    font-size: 20px;
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+}
+
+.users-click {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+.users-click:hover {
+    color: #3f3f3f;
+    text-shadow: 1px -1px 1px #010;
+    text-decoration: none;
+}
+
+.search-post {
+    margin-left: 20px;
+    margin-bottom: 2px;
+    display: inline !important;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: black;
+    font-size: 16px;
+    cursor: text;
+    border-radius: 3px;
+}
+
+input.search-post {
+    min-width: 300px;
+}
+
+.options {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+label {
+    display: table;
+    margin:auto;
+    min-width: 400px;
+}
+
+.post-user-back {
+    display: block;
+    text-align: center !important;
+}
+
+.main-container {
+    padding: 50px 0px;
+}
+
+/* card container */
+.card-container {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin-bottom: 30px;
+}
+
+/* flip the pane when hovered */
+
+.card-container:hover .card,
+.card-container.hover.manual-flip .card {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.card {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during flip */
+
+.front,
+.back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    z-index: 3;
+}
+
+/*       your card style       */
+.card {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+
+.card-container,
+.front,
+.back {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+
+.card .cover {
+    height: 105px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+.card .cover img {
+    width: 100%;
+}
+
+.card .user {
+    border-radius: 50%;
+    display: block;
+    height: 120px;
+    margin: -55px auto 0;
+    overflow: hidden;
+    width: 120px;
+}
+
+.card .user img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #FFFFFF;
+    width: 100%;
+}
+
+.card .content {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    padding: 10px 20px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card .content .main {
+    min-height: 160px;
+}
+
+.card .back .content .main {
+    height: 215px;
+}
+
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card h5 {
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card .profession {
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card .footer {
+    border-top: 1px solid #EEEEEE;
+    color: #999999;
+    margin: 30px 0 0;
+    padding: 10px 0 0;
+    text-align: center;
+}
+
+.card .footer .social-links {
+    font-size: 18px;
+}
+
+.card .footer .social-links a {
+    margin: 0 7px;
+}
+
+.card .footer .btn-simple {
+    margin-top: -6px;
+}
+
+.card .header {
+    padding: 15px 20px;
+    height: 90px;
+}
+
+.card .motto {
+    border-bottom: 1px solid #EEEEEE;
+    color: black;
+    font-size: 26px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/*      card content style        */
+
+.title {
+    color: #506A85;
+    text-align: center;
+    font-weight: 300;
+    font-size: 44px;
+    margin-bottom: 90px;
+    line-height: 90%;
+}
+
+.title small {
+    font-size: 17px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.my-form {
+    background-color: rgba(204, 204, 204, 0.75);
+    display: inline-block;
+    padding: 25px;
+    margin-top: 80px;
+    border: 1px solid #525252;
+    border-radius: 12px;
+}
+
+.details {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    min-width: 600px;
+}
+
+.my-form-body {
+    font-size: 20px;
+}
+
+.my-form-title {
+    padding-left: 15px;
+}
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+/*comment section*/
+.single-comment-div {
+    background-color: white;
+    word-wrap: break-word;
+    border: solid black 1px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.formClass textarea {
+    width: 100%;
+}
+
+/*end of comment section*/
+
+/*comment Buttons section*/
+.customButton {
+    -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+    background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea', GradientType=0);
+    background-color: #bddbfa;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    border: 1px solid #3575b5;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+.customButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+    background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa', GradientType=0);
+    background-color: #80b5ea;
+}
+
+.customButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.buttonHolder {
+    padding-top: 10px;
+}
+
+.commentButtonsHolder {
+    float: right;
+    margin-top: -4%;
+}
+
+.commentDetails {
+    font-size: 12px;
+    margin-bottom: -2%;
+    padding: 10px;
+}
+
+.commentButton {
+    -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+    background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea', GradientType=0);
+    background-color: #bddbfa;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    border: 1px solid #3575b5;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 18px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+.commentButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+    background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+    background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa', GradientType=0);
+    background-color: #80b5ea;
+}
+
+.commentButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/*end of comment button section*/
+

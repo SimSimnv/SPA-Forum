@@ -1,0 +1,10 @@
+#sideBar {
+    float: right;
+    width: 200px;
+    background: #ccc;
+    min-height: 100%;
+    margin: 5px;
+    padding: 10px;
+}
+
+
