@@ -2,8 +2,8 @@ import $ from 'jquery';
 
 let KinveyRequester=(function(){
     const kinveyBaseUrl='https://baas.kinvey.com/';
-    const kinveyAppKey='kid_B1CgsiCfx';
-    const kinveyAppSecret='2b8a330f821f41ad97076b893bd348d0';
+    const kinveyAppKey='kid_r1CQdfFHg';
+    const kinveyAppSecret='13cfcc3dd3e4464fbc4c0b82292f5f1d';
     const kinveyAppAuthHeaders={'Authorization':'Basic '+btoa(kinveyAppKey+':'+kinveyAppSecret)};
 
     function loginUser(username,password){

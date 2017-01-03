@@ -7,7 +7,7 @@ class HomeView extends Component {
             return(
                 <div>
                     <h1>Home</h1>
-                    <p>Welcome to the SoftUni project Blog, a single page application created with javascript, React, jquery, ajax and Kinvey</p>
+                    <p>Welcome to the SPA-Forum, application created with javascript, React, jquery, ajax and Kinvey</p>
                 </div>
             )
         }
@@ -52,7 +52,7 @@ class HomeView extends Component {
             <div className="home-view">
                 <SideBarView load={this.props.load} posts={this.props.posts}/>
                 <h1>Home</h1>
-                <p>Welcome to the SoftUni project Blog, a single page application created with javascript, React, jquery, ajax and Kinvey</p>
+                <p>Welcome to the SPA-Forum, application created with javascript, React, jquery, ajax and Kinvey</p>
                 <div>
                     <h3>
                         Latest post

@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer-view">
-                (c) 2016 - Blog Project
+                (c) 2016 - SPA Project
             </div>
         );
     }
